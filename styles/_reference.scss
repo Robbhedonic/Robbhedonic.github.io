@@ -1,0 +1,269 @@
+.reviews-main,
+.container--narrow {
+    * {
+        box-sizing: border-box;
+       
+        padding: 10px;
+
+
+        body {
+           
+            margin: 0 auto;
+
+            max-width: 800px;
+
+            padding: 20px;
+        }
+
+        .heading {
+            font-size: 25px;
+            margin-right: 25px;
+        }
+
+        .fa {
+            font-size: 25px;
+        }
+
+        .checked {
+            color: $TitleTextColor;
+        }
+
+
+        .side {
+            float: left;
+            width: 15%;
+            margin-top: 10px;
+        }
+
+        .middle {
+            float: left;
+            width: 70%;
+            margin-top: 10px;
+        }
+
+
+        .right {
+            text-align: right;
+        }
+
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .bar-container {
+            width: 100%;
+            background-color:$OtherBackgroundColor;
+            text-align: center;
+            color:$OtherBackgroundColor;
+        }
+
+
+        .bar-5 {
+            width: 60%;
+            height: 18px;
+            background-color: $ReferenceColour;
+        }
+
+        .bar-4 {
+            width: 30%;
+            height: 18px;
+            background-color: $ReferenceColour;
+        }
+
+        .bar-3 {
+            width: 10%;
+            height: 18px;
+            background-color: $ReferenceColour;
+        }
+
+        .bar-2 {
+            width: 4%;
+            height: 18px;
+            background-color: $ReferenceColour;
+        }
+
+        .bar-1 {
+            width: 15%;
+            height: 18px;
+            background-color: $ReferenceColour;
+        }
+
+
+        @media (min-width: 320px) {
+
+            .side,
+            .middle {
+                width: 100%;
+            }
+
+
+            .right {
+                display: none;
+            }
+        }
+    }
+}
+section {
+    padding: 2em;
+    border: rgb(0, 0, 0) solid 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+
+    .index-title {
+        border: $Button-Color solid 5px;
+        font-size: $FontIndexTitle ;
+        padding: $Padding-Index-Title;
+    }
+
+    section .boxes {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        border: 6px solid white;
+        
+
+        #bullets label {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            width: 5em;
+            height: 4em;
+            border-radius: 2%;
+            background: $BoxBackgroundColor;
+            font-family: $Font-Text-Title;
+            padding: 2em;
+            /*border: #45a049 5px solid;*/
+        }
+       
+
+
+
+    }
+
+    #slider input[type=radio] {
+        display: none;
+
+    }
+
+    #slides {
+        /*border: 3px solid #ec0f0f;*/
+        /*background: rgb(219, 77, 77);*/
+        position: relative;
+        z-index: 1;
+
+        height: 100%;
+        width: 100%;
+
+
+
+        #overflow {
+            /*controla box blue pero de los lados*/
+            overflow: hidden;
+
+            .inner {
+                transition: margin-left 800ms cubic-bezier(0.77, 0, 0.175, 1);
+                width: 600%;
+                height: 40em;
+                display: flex;
+
+            }
+
+
+        }
+
+
+    }
+
+    .slide {
+        width: 110%;
+
+        height: 100%;
+
+        background: $MainBackgroundColor;
+    }
+
+    #slides .slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $BoxBackgroundColor;
+        border: rgba(0, 0, 0, 0) solid 0.5em;
+
+    }
+
+    #slide1:checked~#slides .inner {
+        margin-left: 0;
+    }
+
+
+
+    #slide2:checked~#slides .inner {
+        margin-left: -100%;
+    }
+
+    #slide3:checked~#slides .inner {
+        margin-left: -200%;
+    }
+
+    #slide4:checked~#slides .inner {
+        margin-left: -300%;
+    }
+
+    #slide5:checked~#slides .inner {
+        margin-left: -400%;
+    }
+
+    #slide6:checked~#slides .inner {
+        margin-left: -500%;
+    }
+
+}
+.ranting{
+    background: $BoxBackgroundColor;
+}
+.box-mom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2em;
+
+    .box-comment {
+        width: 100%;
+
+        border: $Button-Color solid 5px;
+        padding: 1em;
+        color: $ParagrafTextColor;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .comment-image {
+            width: 1.5em;
+            height: 1.5em;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 5px;
+
+        }
+
+        .comment-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+
+
+    }
+}

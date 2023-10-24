@@ -1,0 +1,73 @@
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+
+    .index-name-company {
+        .index-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid $Button-Color;
+            padding: $Padding-Index-Title;
+            font-size: $Font-Text-P;
+            font-family: $Font-Text-Title;
+        }
+
+        .index-description-our-service {
+            color: $TitleTextColor;
+            font-size: 1.2em;
+            padding: 2em;
+        }
+
+    }
+
+    .home-box-information {
+        background-color: $BoxBackgroundColor;
+
+        .home-title-information {
+            font-size: 1.9em;
+            padding: 1.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home-paragraf-information {
+            padding: 1.5em;
+        }
+
+        .home-box-position-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1em;
+
+            .home-box-button {
+                background: $Button-Color;
+                font-size: 1em;
+                font-family: $Font-Text-Title ;
+                text-decoration: none;
+                padding: 0.5em;
+                border-radius: 0.5rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                box-shadow: 0 0 0.2em rgba(41, 40, 40, 0.5);
+                -webkit-transition-property: box-shadow, transform;
+                transition-property: box-shadow, transforms;
+
+            }
+
+            .home-box-button:hover,
+            .home-box-button:focus,
+            .home-box-button:active {
+                box-shadow: 0 0 0.2em rgb(0, 0, 0, 0.5);
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+                background: rgba(80, 73, 61, 0.918);
+            }
+        }
+
+    }
+
+}

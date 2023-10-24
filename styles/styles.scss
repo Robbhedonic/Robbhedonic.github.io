@@ -1,0 +1,414 @@
+@import "./variables";
+@import './reference.scss';
+@import './contact.scss';
+@import './index.scss';
+@import './aboutus.scss';
+@import './menu.mediaq.scss';
+
+
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}*
+
+
+body{
+    font-family: $Font-Text-Title;
+    font-weight: 400;
+    font-size: 1.3125rem;
+    line-height: 1.6;
+    display: flex;
+    flex-direction:column;
+    columns: 20em;
+
+}
+@media (min-width:320px) {
+
+    header,
+    footer {
+        padding: 0.2rem 0;
+    }
+}
+
+@media (min-width:320px) {
+    .split {
+        flex-direction: row;
+    }
+
+    .split>* {
+        flex-basis: 100%;
+    }
+
+    .split>*+* {
+        margin: 2em;
+    }
+
+
+}
+@media (min-width:320px){
+    h2{
+        font-size: 1rem;
+    }
+    a{
+        font-size: 0.5rem;
+    }
+}
+.other-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: $Padding-Index-Title;
+    font-size: $Font-Text-Title;
+    font-family: $FontIndexTitle;
+    font-weight: bold;
+}
+
+body,
+h3,
+p, li {
+    margin: 0;
+}
+h4{
+    font-size: 0.5em;
+    color: $ParagrafTextColor;
+    font-family: $Font-Text-Title;
+}
+a{
+    text-decoration: none;
+}
+h3{
+    color: $ParagrafTextColor;
+    font-size: $FontIndexTitle;
+}
+label{
+    color: $OtherBackgroundColor;
+    font-family: $Font-Text-Title;
+}
+
+.send-a {
+    color: $OtherBackgroundColor;
+    background:$BoxBackgroundColor ;
+   
+    
+    font-family: $Font-Text-Title;
+    font-size: 1em;
+}
+a, h1{
+    color: $LinksTextColor;
+    font-size: 0.7em;
+}
+h2{
+ 
+    color: $TitleTextColor;
+    text-decoration: none;
+    font-family: $Font-Text-P;
+    font-size: 1.6em;
+    
+
+}
+li{
+    color: $ParagrafTextColor;
+}
+.t{
+    border: 5px solid $Button-Color;
+}
+
+
+nav{
+    font-family: $Font-Text-Title;
+    font-weight: 900;
+    line-height: 1;
+    color: $TitleTextColor;
+}
+h3{
+    font-size: 120%;
+
+}
+p{
+    color: $ParagrafTextColor;
+}
+/*
+.bg-light{
+    background: $MainBackgroundColor ;
+}*/
+.bg-dark{
+    background-color: $OtherBackgroundColor;
+}
+section{
+    padding: 3rem 0;;
+}
+.container{
+    margin-inline: auto;
+    width: min(60%, 40.5rem);
+}
+.container--narrow{
+    max-width: 34rem;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+.split{
+    display: flex;
+    flex-direction: column;
+}
+.text-center{
+    text-align: center;
+}
+
+header,footer{
+    padding: 5rem 0;
+}
+section {
+    padding: 6rem 0;
+}
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5em;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*
+.location-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .location-address{
+        padding: 3.77em;
+        background: $BoxBackgroundColor;
+        font-size: 1.82em;
+
+    }
+}*/
+
+
+
+button{
+    background:$BoxBackgroundColor ;
+      
+    color: $ParagrafTextColor ;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 30px;
+    border: 2px solid $TitleTextColor;
+
+}
+
+header,footer {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Navbar links */
+footer a, header a {
+    /*float: left;*/
+    display: inline-block;
+    
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+}
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (min-width: 320px) {
+    footer a,
+        header a {
+        float: none;
+        width: 100%;
+    }
+}
+footer h4{
+    color: $BoxBackgroundColor;
+}
+footer nav div{
+
+   /*border:5px solid red;*/
+   width: 4em;
+   height: 4em;
+   justify-content: center;
+   text-align: center;
+}
+footer nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+@media(min-width:320px){
+    footer nav div{
+        width: 100%;
+
+    }
+
+}
+@media(min-width:570px) {
+    footer nav div {
+        width: 20%;
+
+    }
+
+}
+.dot{
+    padding-top: 2em;
+}
+
+@media(min-width:320px) {
+    h2 {
+        padding: 10px;
+        font-size: 0.8em;
+
+    }
+    p, button, a{
+        font-size: 15px;
+    }
+    a{
+        padding: 5px;
+    }
+    footer nav div{
+        padding: 5px;
+        height: 1em;
+    }
+    footer{
+        padding: 0.2em;
+        padding-bottom: 1em;
+    }
+    .header-center{
+        padding: 50px;
+    }
+    
+
+    
+
+}
+
+@media(min-width:570px) {
+    h2{
+        padding: 1em;
+        font-size: 2em;
+
+    }
+
+}
+@media(min-width:700px) {
+   
+    p,
+    button,
+    a{
+        font-size: 0.8em;
+    }
+
+    a {
+        padding: 0.8em;
+    }
+
+    footer nav div {
+       
+        height: 1em;
+    }
+    footer{
+        padding-bottom: 2em;
+    }
+         .header-center {
+             width: 7em;
+         }
+
+   
+
+
+
+
+}
+@media(min-width:900px) {
+
+    p,
+    button,
+    a {
+        font-size: 1em;
+    }
+
+    a {
+        padding: 1em;
+    }
+
+    footer nav div {
+
+        height: 1em;
+    }
+
+    footer {
+        padding-bottom: 2em;
+    }
+    .header-center{
+        width: 20%;
+    }
+}
+
+
+
+.slide1{
+    color: $ParagrafTextColor;
+    background: $BoxBackgroundColor;
+    width: 7em;
+
+}
+#bullets{
+    /*border: 2px solid rgb(251, 0, 255);*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+
+    
+  
+}
+.label-box{
+    background:$BoxBackgroundColor ;
+    color: white;
+    border: 2px solid $Button-Color;
+    width: 12em;
+    height: 2.2em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+ 
+}
+h1{
+    font-size: 1em;
+}
+section{
+    background-color: $MainBackgroundColor;
+}
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
